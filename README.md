@@ -17,9 +17,14 @@ If you are developing a production application, we recommend using TypeScript wi
 
 WaveXPayApp is a Paytm-style payment app clone built with React, Vite, and Tailwind CSS. It demonstrates a modern, responsive UI for mobile and desktop with features like wallet management, money transfer, QR scan mock, offers, and rewards.
 
-This project is intended for UI/UX prototyping, learning, and demonstration purposes.
+This project is intended for UI/UX prototyping, learning, and demonstration purposes
 
----------Features------------
+------ScreenShot------
+
+<img width="1024" height="1536" alt="WaveXPay" src="https://github.com/user-attachments/assets/f863b2c9-3f6d-4980-b66b-de286d25d62e" />
+
+---------Features----
+--------
 
 * Login & Authentication (mock)
 

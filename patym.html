@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paytm:Secure & Fast UPI payment System</title>
+
+    <!-- linking css file.... -->
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
+* {
+    margin: 10;
+    padding: 10;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: rgb(245, 245, 245);
+    height: 100vh;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    line-height: 80px;
+}
+
+nav h1 {
+    font-size: 32px;
+    font-weight: 900;
+    float: left;
+    margin-left: 50px;
+    letter-spacing: 1.5px;
+    color: rgb(7, 7, 121);
+}
+
+nav h1 span {
+    color: rgb(0, 217, 255);
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 17px;
+    padding: 0px 10px;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: rgb(0, 217, 255);
+}
+
+button {
+    padding: 12px 30px;
+    background-color: rgb(10, 216, 243, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(7, 7, 121);
+    color: white;
+}
+
+.content {
+    height: 50px;
+    background: #e5e2e2;
+}
+
+.content p {
+    line-height: 50px;
+    text-align: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.content p span {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.content p a {
+    list-style: none;
+    text-decoration: none;
+    color: #000000;
+}
+
+section {
+    display: block;
+}
+
+.main .mainpage {
+    padding: 128px 0 120px;
+    width: 1260px;
+    margin: auto;
+}
+
+.main .mainpage .submain {
+    width: 650px;
+}
+
+.main .mainpage .submain .image-holder {
+    margin-bottom: 48px;
+}
+
+.main .mainpage .submain .image-holder img {
+    width: 80px;
+    box-shadow: 0 5px 20px rgb(0 41 112 / 10%);
+    border-radius: 16px;
+}
+
+.main .mainpage .submain h1 {
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 65px;
+}
+
+.main .mainpage .submain .paytm-content {
+    padding-top: 10px;
+    width: 475px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.main .mainpage .img-2 {
+    width: 528px;
+    position: absolute;
+    top: 250px;
+    right: 0;
+}
+
+.ad-btn {
+    height: 44px;
+    background: #000;
+    border: 1px solid #000;
+    border-radius: 50px;
+    width: 225px;
+}
+
+.ad-btn p {
+    padding: 0 26px;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1;
+    margin-top: 12px;
+}
+
+hr {
+    width: 100%;
+}
+
+.facility {
+    padding: 0 0 48px;
+    position: relative;
+    background-color: #f5f7fa;
+}
+
+.facility .sub-facility {
+    border-radius: 10px;
+    width: 1170px;
+    margin: auto;
+    z-index: 1;
+    position: relative;
+    background: #fff;
+}
+
+.facility .sub-facility .sub-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 50px 80px 115px;
+}
+
+.facility .sub-facility .sub-1 .content-box {
+    width: 45%;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.facility .sub-facility .sub-1 .content-box .content {
+    width: 175px;
+    display: flex;
+    align-items: center;
+    background: white;
+}
+
+.facility .sub-facility .sub-1 .content-box .content img {
+    height: 77px;
+    width: auto;
+    padding-right: 12px;
+}
+
+.more-content {
+    margin-top: 48px;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 46px;
+}
+
+.facility .sub-facility .sub-1 .content-box .more-content {
+    margin-top: 48px;
+    width: 390px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+}
+
+.facility .sub-facility .sub-1 .content-box .more-content span {
+    padding: 24px 0 30px;
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.download-btn {
+    padding: 0 24px;
+    height: 44px;
+    font-size: 15px;
+    width: max-content;
+    background: #000;
+    color: #fff;
+    font-weight: 500;
+    border: 1px solid #000;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.photo {
+    width: 550px;
+}
+
+.section {
+    background-color: #fff;
+    padding: 0 0 48px;
+    position: relative;
+}
+
+.section .section-sub {
+    border-radius: 10px;
+    width: 1170px;
+    margin: auto;
+    z-index: 1;
+    position: relative;
+}
+
+.section .section-sub .section-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 0!important;
+}
+
+.section .section-sub .section-1 .section-2 {
+    width: 45%;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.section .section-sub .section-1 .section-2 .section-2-content {
+    width: 175px;
+    display: flex;
+    align-items: center;
+}
+
+.section .section-sub .section-1 .section-2 .section-2-content .insurance-img {
+    height: 54px;
+}
+
+.section .section-sub .section-1 .section-2 .section-2-content img {
+    width: auto;
+    padding-right: 12px;
+}
+
+.section .section-sub .section-1 .section-2 .content-here {
+    margin-top: 48px;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 46px;
+}
+
+.section .section-sub .section-1 .section-2 .content-here .content-box-1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 46px;
+    width: 470px;
+    margin-top: 48px;
+}
+
+.section .section-sub .section-1 .section-2 .content-here span {
+    padding: 24px 0 30px;
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.learn-btn {
+    background: #002970;
+    padding: 16px 24px;
+    border-radius: 25px;
+    width: 120px;
+    cursor: pointer;
+    position: relative;
+    font-size: 17px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.learn-btn .learn-content {
+    margin-right: 11px;
+    ;
+}
+
+.section .section-sub .section-1 .ins-img {
+   width: 433px;
+}
+</style>
+
+</head>
+
+<body>
+    <nav>
+        <h1>Pay<span>tm</span></h1>
+        <ul>
+            <li><a href="">Paytm for consumer</a></li>
+            <li><a href="">Paytm for buisness</a></li>
+            <li><a href="">Company</a></li>
+            <li><a href="">Company Relations</a></li>
+            <li><a href="">Career</a></li>
+            </li>
+            <a href="#" class="btn"><button>Sign in</button></a>
+        </ul>
+    </nav>
+    <!--landing page start-->
+
+    <section class="content">
+        <p> <span>No Wallet KYC Required</span> 😊 to pay using UPI on Paytm. <a href="">Learn more.</a></p>
+
+    </section>
+
+
+    <section class="main">
+        <div class="mainpage">
+            <div class="submain">
+                <div class="image-holder">
+                    <img class="img-1" src="	https://assetscdn1.paytm.com/images/catalog/view/310944/1626342046207.png" alt="">
+                </div>
+                <h1>India's Most-loved Payments App</h1>
+                <div class="paytm-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia vitae rem, officiis suscipit quaerat amet expedita ipsa hic exercitationem ab accusamus, natus nesciunt facilis voluptatibus! Magnam animi doloribus nam ex.
+                </div>
+                <img class="img-2" src="https://assetscdn1.paytm.com/images/catalog/view_item/850762/1626096258626.png" alt="">
+            </div>
+            <div class="ad-btn">
+                <p>Download Paytm app</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="facility">
+        <div class="sub-facility">
+            <div class="sub-1">
+                <div class="content-box">
+                    <div class="content">
+                        <img src="https://assetscdn1.paytm.com/images/catalog/view/307186/1615957674521.png" alt=""> UPI Money Transfer
+                    </div>
+
+                    <div class="more-content">
+                        <div class="sub-more-content">Pay anyone directly from your bank account.</div>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum magnam blanditiis repellendus voluptatem qui incidunt libero corporis rerum doloribus maiores et est possimus, iusto, dolorem delectus inventore quidem ab hic!</span>
+
+                        <div class="download-btn">
+                            Download the App
+                        </div>
+                    </div>
+
+                </div>
+                <img class="photo" src="https://assetscdn1.paytm.com/images/catalog/view_item/728702/1626342071104.png" alt="">
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="section">
+        <div class="section-sub">
+            <div class="section-1">
+                <div class="section-2">
+                    <div class="section-2-content">
+                        <img class="insurance-img" src="	https://assetscdn1.paytm.com/images/catalog/view/308775/1617870866597.png" alt="">
+                    </div>
+                    <div class="content-here">
+                        <div class="content-box-1">Insurance made easy.</div>
+                        <span class="text-remain">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore cumque reiciendis assumenda id magnam nihil ea sapiente aut repudiandae saepe tenetur odio nesciunt, laborum molestias doloribus, accusantium maxime dolorum.</span>
+
+                        <div class="learn-btn">
+                            <div class="learn-content">
+                                Learn more
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img class="ins-img" src="	https://assetscdn1.paytm.com/images/catalog/view_item/788790/1626076605479.png" alt="">
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+
+</html>
